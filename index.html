@@ -8,8 +8,8 @@
 <meta property="og:title" content="Jadi Ahli Affiliate Cuti.Biz — Mula dengan RM20 Setahun">
 <meta property="og:description" content="Keahlian dari RM20 setahun. Komuniti, Mall, JobSpot, kursus & laluan affiliate 5 tahap.">
 <meta property="og:type" content="website">
-<!-- GANTI: og:image (1200x630) & favicon sendiri -->
-<meta property="og:image" content="">
+<!-- Lepas deploy: tukar og:image kepada URL penuh, contoh https://DOMAIN/assets/og.jpg -->
+<meta property="og:image" content="assets/og.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3ECB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,13 +19,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/bold/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css">
 
-<!-- GANTI: Facebook Pixel ID -->
+<!-- Opsyen: isi FB_PIXEL_ID bila ada (kosong = tiada tracking) -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];}(window,document,'script');
-window.FB_PIXEL_ID='';/* GANTI */
+window.FB_PIXEL_ID='';
 if(window.FB_PIXEL_ID){var s=document.createElement('script');s.async=1;s.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(s);fbq('init',window.FB_PIXEL_ID);fbq('track','PageView');}
 </script>
-<!-- GANTI: TikTok Pixel & GTM container (letak di sini) -->
+<!-- Opsyen: TikTok Pixel & GTM container (letak di sini) -->
 
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Product","name":"Keahlian Affiliate Cuti.Biz","brand":{"@type":"Organization","name":"QW MARKETING SDN. BHD."},"description":"Keahlian komuniti & affiliate Cuti.Biz, dari RM20 setahun.","offers":[{"@type":"Offer","name":"P2P","price":"20.00","priceCurrency":"MYR"},{"@type":"Offer","name":"PK","price":"35.00","priceCurrency":"MYR"},{"@type":"Offer","name":"EP","price":"96.50","priceCurrency":"MYR"}]}
@@ -92,6 +92,8 @@ p,li{line-height:1.35}
 .screen-ph .play::before,.screen-ph .play::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(96,165,250,.7);animation:ping 2s ease-out infinite}
 .screen-ph .play::after{animation-delay:1s}
 @keyframes ping{0%{transform:scale(1);opacity:1}100%{transform:scale(1.8);opacity:0}}
+.screen-posters{position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#0b1220;padding:4px}
+.screen-posters img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:3px}
 .base{height:22px;margin:0 -7%;background:linear-gradient(180deg,#d6dae2,#7d8491);border-radius:0 0 18px 18px;position:relative;box-shadow:0 18px 30px rgba(0,0,0,.45)}
 .base::before{content:"";position:absolute;top:0;left:50%;width:18%;height:8px;margin-left:-9%;background:#9aa1ad;border-radius:0 0 10px 10px}
 .play-hint{position:absolute;top:-34px;right:6%;pointer-events:none;display:flex;align-items:flex-end;gap:4px;z-index:3;transition:opacity .4s}
@@ -156,6 +158,7 @@ p,li{line-height:1.35}
 .who img{width:52px;height:52px;border-radius:50%;object-fit:cover}
 .who b{display:block;font-size:18px}
 .who span{font-size:15px;color:#6b7280}
+.avi{width:52px;height:52px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:24px}
 .stars{color:#facc15;font-size:16px;display:flex;gap:2px}
 .dash{margin-top:20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:14px}
 .kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
@@ -266,7 +269,7 @@ p,li{line-height:1.35}
 @media(max-width:1180px){.chip-f span{display:none}}
 @media(max-width:640px){.chip-f{padding:5px}.chip-f i{font-size:16px}}
 .coach-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
-@media(max-width:640px){.coach-grid{gap:14px}.coach-grid p{font-size:16px}}
+@media(max-width:640px){.coach-grid{grid-template-columns:1fr;gap:24px}}
 .stat-big{font:800 clamp(34px,5vw,52px)/1 Inter,sans-serif;color:#0f172a}
 .stat-big span{color:#f97316}
 .mark{background:linear-gradient(#facc15,#facc15) no-repeat 0 100%/0 100%;transition:background-size 1.1s ease;padding:0 .15em;color:#0f172a}
@@ -276,6 +279,14 @@ p,li{line-height:1.35}
 .gal div{border:2px solid #fde68a;border-radius:12px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:30px;background:#fff7e6}
 .gal div:first-child{grid-column:1/-1;aspect-ratio:16/9}
 @media(max-width:640px){.gal{grid-template-columns:1fr}.gal div:first-child{aspect-ratio:4/3}}
+.gal.posters{grid-template-columns:1fr 1fr}
+.gal.posters img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border:2px solid #fde68a;border-radius:12px;background:#fff7e6}
+.gal-note{grid-column:1/-1;font-size:13px;color:#9ca3af;text-align:center}
+.sponsor-card{background:radial-gradient(circle at 30% 20%,#1e3a8a,#0f172a 70%)!important;color:#e5e7eb!important}
+.sponsor-card .mono{width:110px;height:110px;border-radius:50%;background:linear-gradient(135deg,#facc15,#f97316);color:#0f172a;font:800 42px Outfit,sans-serif;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 6px rgba(255,255,255,.12)}
+.sponsor-card b{font:700 30px Outfit,sans-serif;color:#fff}
+.sponsor-card .refid{display:inline-flex;gap:6px;align-items:center;background:rgba(250,204,21,.12);border:1px solid rgba(250,204,21,.4);color:#fde68a;border-radius:99px;padding:6px 12px;font-weight:700}
+@media(max-width:640px){.sponsor-card .mono{width:64px;height:64px;font-size:24px}.sponsor-card b{font-size:20px}.sponsor-card span{font-size:13px}}
 
 /* stacking cards */
 .stack{display:flex;flex-direction:column;gap:28px;max-width:60rem;margin:0 auto}
@@ -423,6 +434,7 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:90;width:100%
 .plan .for{font-size:16px;color:#6b7280;margin:6px 0 14px}
 .plan .pk{height:150px;border-radius:14px;display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;background:#f1f5f9}
 @media(max-width:560px){.plan .pk{height:130px}}
+.plan .pk img{height:100%;width:auto;border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.2)}
 .plan .pk span{width:54px;height:66px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;box-shadow:0 8px 16px rgba(0,0,0,.15)}
 .plan .was{font:800 18px Inter,sans-serif;color:#9ca3af;text-decoration:line-through}
 .plan .price{font:800 44px Inter,sans-serif;color:#0f172a}
@@ -491,6 +503,7 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:90;width:100%
 .stamp i{font-size:28px}.stamp b{font:800 13px Inter,sans-serif}
 .postmark{position:absolute;top:30px;right:96px;width:84px;height:84px;border:3px solid #dc2626;border-radius:50%;opacity:.6;transform:rotate(-12deg);display:flex;align-items:center;justify-content:center;text-align:center;color:#dc2626;font:800 10px/1.2 Inter,sans-serif}
 @media(max-width:560px){.postmark{display:none}.stamp{width:54px;height:62px;top:12px;right:12px}.stamp i{font-size:20px}}
+.sig-typed{font-family:"Gloria Hallelujah",cursive;font-size:44px;color:#1d4ed8;transform:rotate(-4deg);margin-top:6px}
 .sig{width:400px;max-width:100%;height:160px;border:2px dashed #e5e7eb;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#9ca3af;font-size:16px;margin-top:10px}
 .sig-role{font-size:16px;color:#6b7280;margin-top:6px}
 
@@ -573,23 +586,25 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     <p class="subh">Satu keahlian, satu ekosistem: diskaun ahli, Mall komuniti, JobSpot, kursus affiliate dan laluan naik tahap dari ahli biasa sampai Agensi Pemasaran. Saya bimbing dari hari pertama.</p>
 
     <div class="laptop" id="laptop">
-      <div class="play-hint" id="playHint">
+      <!-- Petunjuk play hanya dipapar bila data-loom diisi -->
+      <div class="play-hint hide" id="playHint">
         <svg width="54" height="44" viewBox="0 0 54 44" fill="none"><path d="M4 4 C 30 2, 46 14, 44 38 M44 38 l-8 -6 M44 38 l6 -8" stroke="#facc15" stroke-width="3" stroke-linecap="round"/></svg>
         <span class="tag">▶ Tekan play — tonton video ni dulu!</span>
       </div>
       <div class="lid">
-        <!-- GANTI: letak link Loom di data-loom (contoh https://www.loom.com/embed/XXXX) -->
+        <!-- Opsyen: letak link Loom/YouTube embed di data-loom untuk ganti poster dengan video -->
         <div class="screen" id="screen" data-loom="">
-          <div class="screen-ph">
-            <div class="play"><i class="ph-fill ph-play"></i></div>
-            <span>Video penerangan Cuti.Biz <span class="contoh">GANTI LINK LOOM</span></span>
+          <div class="screen-posters">
+            <img src="assets/poster-p2p.webp" alt="Poster rasmi keahlian P2P Cuti.Biz RM20 setahun" loading="eager">
+            <img src="assets/poster-ep.webp" alt="Poster rasmi pakej EP Cuti.Biz RM96.50" loading="eager">
+            <img src="assets/poster-pk.webp" alt="Poster rasmi PK Cuti.Biz RM35 setahun" loading="eager">
           </div>
         </div>
       </div>
       <div class="base"></div>
     </div>
 
-    <!-- GANTI: tarikh tamat promo/CSR rate SEBENAR. Kosong = countdown disorok. Contoh: 2026-12-31T23:59:59+08:00 -->
+    <!-- Opsyen: tarikh tamat promo/CSR rate SEBENAR (belum diumum Cuti.Biz). Kosong = countdown disorok. Contoh: 2026-12-31T23:59:59+08:00 -->
     <div class="cd" id="countdown" data-deadline="">
       <div class="cd-label"><i class="ph-bold ph-clock-countdown"></i>Harga <b>CSR Rate</b> tamat dalam</div>
       <div class="cd-row">
@@ -606,7 +621,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     </div>
     <div class="trust-avatars">
       <div class="avs">
-        <img src="https://i.pravatar.cc/80?u=cb1" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=cb2" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=cb3" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=cb4" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=cb5" alt="Ahli" loading="lazy">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f97316'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2316a34a'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%237c3aed'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23db2777'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230891b2'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy">
       </div>
       <span>Komuniti <b class="num" style="color:#fff">10,156</b> ahli di seluruh Malaysia*</span>
     </div>
@@ -634,44 +649,45 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 </div>
 
 <!-- ============ 2. HASIL AHLI (slider) ============ -->
-<!-- GANTI: SEMUA testimoni di bawah = CONTOH. Ganti dengan cerita ahli SEBENAR (ada kebenaran). -->
+<!-- ============ 2. HASIL (nombor sebenar dari Buletin Cuti.Biz) ============ -->
 <section class="wrap">
-  <span class="label gloria">Cerita sebenar ahli</span>
-  <h2 class="h2">Apa Jadi Lepas Mereka <span class="stabilo">Join Cuti.Biz</span></h2>
-  <p class="lede"><span class="contoh">CONTOH — GANTI DENGAN TESTIMONI SEBENAR</span></p>
+  <span class="label gloria">Bukan janji kosong — ni nombor sebenar</span>
+  <h2 class="h2">Berapa Ahli <span class="stabilo">Jimat & Dapat</span> dalam Cuti.Biz</h2>
+  <p class="lede">Contoh di bawah dipetik terus dari Buletin & portal rasmi Cuti.Biz (Okt–Nov 2026).</p>
   <div class="slider" id="slider">
     <div class="slides"><div class="slides-track">
       <div class="slide"><div class="tcard">
         <svg class="qmark" viewBox="0 0 24 24"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm8 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z"/></svg>
-        <h3>Dari RM0 → <span class="stabilo">RM[X] komisen</span> bulan pertama</h3>
-        <p class="q">"[GANTI] Saya suri rumah, tak pernah jual online. Lepas join P2P RM20, sponsor ajar guna link affiliate. Bulan pertama dah dapat komisen pertama."</p>
-        <div class="who"><img src="https://i.pravatar.cc/104?u=t1" alt="Ahli" loading="lazy"><div><b>[Nama Ahli]</b><span>Suri rumah, [Negeri]</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div>
-        <div class="dash"><div class="kpis"><div class="kpi"><small>Referral</small><b>[X]</b></div><div class="kpi"><small>Komisen</small><b>RM[X]</b></div><div class="kpi"><small>Tahap</small><b>P2P</b></div></div><div class="bars"><span style="height:20%"></span><span style="height:35%"></span><span style="height:30%"></span><span style="height:55%"></span><span style="height:70%"></span><span style="height:90%"></span></div></div>
+        <h3>King Stevia: ahli jimat <span class="stabilo">RM15 (30%)</span>, seller dapat <span class="stabilo">RM15</span></h3>
+        <p class="q">Produk Cuti.Biz Official. Harga awam RM50, harga ahli RM35. Jual kepada bukan ahli → komisen direct RM15. Introducer/upline RM4, OR PAL RM3.</p>
+        <div class="who"><div class="avi" style="background:#16a34a"><i class="ph-bold ph-drop"></i></div><div><b>King Stevia 10ml</b><span>Cuti.Biz Official · Buletin 15/10/2026</span></div></div>
+        <div class="dash"><div class="kpis"><div class="kpi"><small>Harga ahli</small><b>RM35</b></div><div class="kpi"><small>Komisen direct</small><b>RM15</b></div><div class="kpi"><small>Introducer</small><b>RM4</b></div></div><div class="bars"><span style="height:100%"></span><span style="height:70%"></span><span style="height:30%"></span><span style="height:8%"></span><span style="height:6%"></span></div></div>
       </div></div>
       <div class="slide"><div class="tcard">
         <svg class="qmark" viewBox="0 0 24 24"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm8 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z"/></svg>
-        <h3>Kedai runcit dapat <span class="stabilo">[X] pelanggan baru</span></h3>
-        <p class="q">"[GANTI] Daftar PK RM35, kedai saya masuk direktori Community Physical Shop. Ahli komuniti sekitar mula datang beli."</p>
-        <div class="who"><img src="https://i.pravatar.cc/104?u=t2" alt="Ahli" loading="lazy"><div><b>[Nama Ahli]</b><span>Pemilik kedai, [Bandar]</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div>
-        <div class="dash"><div class="kpis"><div class="kpi"><small>Pelanggan baru</small><b>[X]</b></div><div class="kpi"><small>Jualan</small><b>RM[X]</b></div><div class="kpi"><small>Tahap</small><b>PK</b></div></div><div class="bars"><span style="height:40%"></span><span style="height:45%"></span><span style="height:50%"></span><span style="height:62%"></span><span style="height:68%"></span><span style="height:80%"></span></div></div>
+        <h3>IP Mini EDP: ahli jimat <span class="stabilo">RM8 (32%)</span> setiap botol</h3>
+        <p class="q">Minyak wangi dari Bandung. Harga awam RM25, harga ahli RM17. Komisen direct jualan kepada bukan ahli RM8. Introducer/upline RM3, OR PAL RM2.</p>
+        <div class="who"><div class="avi" style="background:#7c3aed"><i class="ph-bold ph-flower"></i></div><div><b>IP Mini 3ml EDP</b><span>Cuti.Biz Official · Buletin 15/10/2026</span></div></div>
+        <div class="dash"><div class="kpis"><div class="kpi"><small>Harga ahli</small><b>RM17</b></div><div class="kpi"><small>Komisen direct</small><b>RM8</b></div><div class="kpi"><small>Introducer</small><b>RM3</b></div></div><div class="bars"><span style="height:100%"></span><span style="height:68%"></span><span style="height:32%"></span><span style="height:12%"></span><span style="height:8%"></span></div></div>
       </div></div>
       <div class="slide"><div class="tcard">
         <svg class="qmark" viewBox="0 0 24 24"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm8 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z"/></svg>
-        <h3>Naik ke EP, bina <span class="stabilo">team [X] orang</span></h3>
-        <p class="q">"[GANTI] Mula P2P, lepas faham sistem saya ambil pakej EP. Biz kad & ID card buat orang lebih percaya bila saya kongsi."</p>
-        <div class="who"><img src="https://i.pravatar.cc/104?u=t3" alt="Ahli" loading="lazy"><div><b>[Nama Ahli]</b><span>Pekerja kerajaan, [Negeri]</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div>
-        <div class="dash"><div class="kpis"><div class="kpi"><small>Team</small><b>[X]</b></div><div class="kpi"><small>Komisen</small><b>RM[X]</b></div><div class="kpi"><small>Tahap</small><b>EP</b></div></div><div class="bars"><span style="height:15%"></span><span style="height:28%"></span><span style="height:44%"></span><span style="height:58%"></span><span style="height:76%"></span><span style="height:95%"></span></div></div>
+        <h3>Peniaga kedai jimat <span class="stabilo">RM164</span> setahun untuk iklan kedai</h3>
+        <p class="q">Harga sebenar PK RM199 setahun, CSR Rate RM35. Kedai dipapar dalam Biz Directory & Community Shop supaya ahli sekitar boleh cari ikut lokasi.</p>
+        <div class="who"><div class="avi" style="background:#f97316"><i class="ph-bold ph-storefront"></i></div><div><b>Pakej PK — Peniaga Kedai</b><span>Dibuka rasmi 18/11/2026</span></div></div>
+        <div class="dash"><div class="kpis"><div class="kpi"><small>Harga sebenar</small><b>RM199</b></div><div class="kpi"><small>CSR Rate</small><b>RM35</b></div><div class="kpi"><small>Jimat</small><b>RM164</b></div></div><div class="bars"><span style="height:100%"></span><span style="height:18%"></span></div></div>
       </div></div>
       <div class="slide"><div class="tcard">
         <svg class="qmark" viewBox="0 0 24 24"><path d="M7 7h4v4H8c0 2 1 3 3 3v3c-4 0-6-2-6-6V7zm8 0h4v4h-3c0 2 1 3 3 3v3c-4 0-6-2-6-6V7z"/></svg>
-        <h3>Jimat <span class="stabilo">RM[X]</span> guna diskaun ahli</h3>
-        <p class="q">"[GANTI] Saya join sebab diskaun ahli & Mall komuniti. Komisen tu bonus, yang penting belanja harian dah jimat."</p>
-        <div class="who"><img src="https://i.pravatar.cc/104?u=t4" alt="Ahli" loading="lazy"><div><b>[Nama Ahli]</b><span>Pelajar IPT, [Negeri]</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div>
-        <div class="dash"><div class="kpis"><div class="kpi"><small>Jimat</small><b>RM[X]</b></div><div class="kpi"><small>Pembelian</small><b>[X]</b></div><div class="kpi"><small>Tahap</small><b>P2P</b></div></div><div class="bars"><span style="height:30%"></span><span style="height:42%"></span><span style="height:38%"></span><span style="height:52%"></span><span style="height:60%"></span><span style="height:72%"></span></div></div>
+        <h3>Pakej EP: harga sebenar RM313, Early Bird <span class="stabilo">RM96.50</span></h3>
+        <p class="q">Termasuk keahlian P2P setahun, Business Card & ID Card rasmi, 3 e-book (Siri 0–2), kelas online unlimited dan kursus Digital Marketing TikTok.</p>
+        <div class="who"><div class="avi" style="background:#2563eb"><i class="ph-bold ph-identification-badge"></i></div><div><b>Pakej EP — Ejen Pemasaran</b><span>Buletin 17/11/2026</span></div></div>
+        <div class="dash"><div class="kpis"><div class="kpi"><small>Harga sebenar</small><b>RM313</b></div><div class="kpi"><small>Early Bird</small><b>RM96.50</b></div><div class="kpi"><small>Jimat</small><b>RM216.50</b></div></div><div class="bars"><span style="height:100%"></span><span style="height:31%"></span></div></div>
       </div></div>
     </div></div>
     <div class="sl-nav"><button class="sl-btn" data-dir="-1" aria-label="Sebelum"><i class="ph-bold ph-caret-left"></i></button><div class="dots"></div><button class="sl-btn" data-dir="1" aria-label="Seterusnya"><i class="ph-bold ph-caret-right"></i></button></div>
   </div>
+  <p style="text-align:center;font-size:14px;color:#9ca3af;margin-top:14px">Komisen bergantung pada jenis transaksi & peranan, dan tidak semestinya diterima oleh seorang individu. Tiada jaminan pendapatan.</p>
 </section>
 
 <!-- ============ 3. SOCIAL PROOF ANGKA ============ -->
@@ -686,17 +702,17 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
       <div class="sp-card rv"><span class="badge-res">Seluruh Malaysia</span><span class="num">31</span><small>Peniaga Berdaftar</small></div>
       <div class="sp-card rv"><span class="badge-res">Kedai fizikal</span><span class="num">8</span><small>Peniaga Kedai (PK)</small></div>
     </div>
-    <p class="lede"><i class="ph-bold ph-chat-circle-text"></i> Macam ni rupa group support ahli saya <span class="contoh">CONTOH — GANTI SCREENSHOT SEBENAR</span></p>
+    <p class="lede"><i class="ph-bold ph-megaphone"></i> Pengumuman terkini dalam Buletin rasmi Cuti.Biz — komuniti ni memang aktif</p>
     <div class="phone" id="phone">
-      <div class="wa-head"><div class="gav"><i class="ph-fill ph-users-three"></i></div><div><b>Team Cuti.Biz [Nama Team]</b><small>[N] ahli</small></div></div>
+      <div class="wa-head"><div class="gav"><i class="ph-fill ph-megaphone"></i></div><div><b>Buletin Cuti.Biz</b><small>29 artikel · dikemas kini 19/11/2026</small></div></div>
       <div class="wa-body" role="log" aria-live="polite">
-        <span class="wa-day">HARI INI</span>
-        <div class="msg in" data-n="Aina"><b style="color:#53bdeb">Aina</b>Alhamdulillah dah dapat notifikasi komisen pertama 🥹<span class="tm">9:12 AM</span></div>
-        <div class="msg in" data-n="Ravi"><b style="color:#ffd279">Ravi</b>Kedai saya dah keluar dalam direktori PK. Terima kasih team!<span class="tm">9:20 AM</span></div>
-        <div class="msg in" data-n="Mei Ling"><b style="color:#25d366">Mei Ling</b>Baru siap baca E-Book Siri 1. Senang faham rupanya<span class="tm">9:41 AM</span></div>
-        <div class="msg in" data-n="Hakim"><b style="color:#ff72a1">Hakim</b>Bila kursus 2H1M kat DURUS seterusnya?<span class="tm">10:03 AM</span></div>
-        <div class="msg in" data-n="Farah"><b style="color:#a5b3ff">Farah</b>Saya baru join P2P semalam, salam kenal semua 👋<span class="tm">10:15 AM</span></div>
-        <div class="msg out">Welcome Farah! Malam ni 9pm kita buat sesi onboarding, saya share step pertama 💪<span class="tm">10:16 AM <span class="tick">✓✓</span></span></div>
+        <span class="wa-day">NOVEMBER 2026</span>
+        <div class="msg in" data-n="Admin Cuti.Biz"><b style="color:#53bdeb">Pengumuman · 12/11</b>📚 Kelas online Siri 0, 1 & 2 untuk EP — setiap malam 9–10pm di Google Meet.<span class="tm">Buletin</span></div>
+        <div class="msg in" data-n="Admin Cuti.Biz"><b style="color:#ffd279">Promosi · 17/11</b>Keahlian P2P Early Bird RM20 setahun (harga sebenar RM99). 10 manfaat dalam satu keahlian.<span class="tm">Buletin</span></div>
+        <div class="msg in" data-n="Admin Cuti.Biz"><b style="color:#25d366">Pengumuman · 18/11</b>Pendaftaran PK rasmi dibuka — sambutan awal amat menggalakkan 🏪<span class="tm">Buletin</span></div>
+        <div class="msg in" data-n="Admin Cuti.Biz"><b style="color:#ff72a1">Komuniti · 19/11</b>Program CSR Komuniti: taja keahlian untuk ibu tunggal, asnaf & pelajar 🤲<span class="tm">Buletin</span></div>
+        <div class="msg in" data-n="Admin Cuti.Biz"><b style="color:#a5b3ff">Pengumuman · 19/11</b>Kickstart Contest: daftar 60 ahli baharu sebelum 30/11 → Business Talk Lunch bersama Founder 🍽️<span class="tm">Buletin</span></div>
+        <div class="msg out">Semua pengumuman ni saya kongsi terus dengan ahli team saya. Tak tertinggal satu pun 👍<span class="tm">SifuRobot <span class="tick">✓✓</span></span></div>
         <div class="typing"><span class="tn"></span> sedang menaip <i></i><i></i><i></i></div>
       </div>
     </div>
@@ -761,11 +777,15 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 <section class="sec-cream">
   <div class="wrap">
     <span class="label gloria">SIAPA..</span>
-    <!-- GANTI: nama sebenar sponsor -->
     <h2 class="h2">SifuRobot nie? Apa dia boleh bantu?</h2>
     <div class="coach-photo rv" id="coachPhoto" style="margin-top:30px">
-      <!-- GANTI: foto SEBENAR sponsor (landskap 16:9). Jangan guna gambar AI. -->
-      <div class="ph"><i class="ph-bold ph-user-circle" style="font-size:64px"></i>Foto sebenar sponsor <span class="contoh">GANTI FOTO</span></div>
+      <!-- Opsyen: ganti kad ini dengan foto SEBENAR sponsor (landskap 16:9). Jangan guna gambar AI. -->
+      <div class="ph sponsor-card">
+        <div class="mono">SR</div>
+        <b>SifuRobot</b>
+        <span>Sponsor Affiliate Cuti.Biz</span>
+        <span class="refid"><i class="ph-bold ph-identification-badge"></i>Referral ID: CB981</span>
+      </div>
       <span class="chip-f" style="top:-14px;left:4%;transition-delay:.1s"><i class="ph-bold ph-whatsapp-logo" style="color:#25d366"></i><span>WhatsApp</span></span>
       <span class="chip-f" style="top:20%;left:-3%;transition-delay:.2s"><i class="ph-bold ph-facebook-logo" style="color:#1877f2"></i><span>Facebook</span></span>
       <span class="chip-f" style="top:48%;left:-4%;transition-delay:.3s"><i class="ph-bold ph-tiktok-logo" style="color:#000"></i><span>TikTok</span></span>
@@ -779,15 +799,17 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     </div>
     <div class="coach-grid rv">
       <div>
-        <!-- GANTI: bio & statistik sebenar sponsor -->
-        <div class="stat-big">[N]<span>++</span></div>
-        <p style="color:#6b7280;font-size:16px;margin-bottom:14px">ahli dalam team saya <span class="contoh">GANTI</span></p>
+        <div class="stat-big">CB<span>981</span></div>
+        <p style="color:#6b7280;font-size:16px;margin-bottom:14px">Referral ID saya — dikesan automatik bila anda daftar melalui link di page ni</p>
         <p>Saya ahli affiliate Cuti.Biz yang <span class="mark">bimbing ahli baru dari kosong</span>. Tugas saya simple: pastikan anda <b>tak terkapai-kapai</b> lepas daftar.</p>
-        <p style="margin-top:12px">Dari setup akaun, faham 5 tahap affiliate, sampai cara kongsi link dengan <span class="mark">cara yang jujur & beretika</span> — <span class="uline">saya ada dalam group bersama anda</span>.</p>
+        <p style="margin-top:12px">Dari setup akaun, faham 5 tahap affiliate, sampai cara kongsi link dengan <span class="mark">cara yang jujur & beretika</span> — <span class="uline">saya boleh dihubungi terus di WhatsApp</span>.</p>
       </div>
-      <div class="gal">
-        <!-- GANTI: 5 foto sebenar (event, kursus DURUS, sesi team). Tiada gambar AI muka sponsor. -->
-        <div><i class="ph-bold ph-image"></i></div><div><i class="ph-bold ph-image"></i></div><div><i class="ph-bold ph-image"></i></div><div><i class="ph-bold ph-image"></i></div><div><i class="ph-bold ph-image"></i></div>
+      <div class="gal posters">
+        <img src="assets/poster-ekosistem.webp" alt="Poster Satu Keahlian Satu Ekosistem Cuti.Biz" loading="lazy">
+        <img src="assets/poster-belajar.webp" alt="Poster Belajar, Berniaga & Terima Komisen" loading="lazy">
+        <img src="assets/poster-csr.webp" alt="Poster Program CSR Komuniti Cuti.Biz" loading="lazy">
+        <img src="assets/poster-bop.webp" alt="Poster Business Opportunity Program Cuti.Biz" loading="lazy">
+        <p class="gal-note">Bahan promosi rasmi Cuti.Biz</p>
       </div>
     </div>
 
@@ -829,7 +851,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
         <li><i class="ph-bold ph-check-circle"></i>Akses komuniti & perkhidmatan ahli</li>
         <li><i class="ph-bold ph-check-circle"></i>Link affiliate untuk kongsi & jana komisen</li>
         <li><i class="ph-bold ph-check-circle"></i>Biz Kad, ID Card & E-Book Siri 0–2 (pakej EP)</li>
-        <li><i class="ph-bold ph-check-circle"></i>Bimbingan sponsor dalam group support</li>
+        <li><i class="ph-bold ph-check-circle"></i>Bimbingan sponsor terus melalui WhatsApp</li>
       </ul>
       <div class="cta-wrap" style="align-items:flex-start"><a href="#harga" class="btn">Lihat Pakej Keahlian <i class="ph-fill ph-hand-pointing cursor"></i></a></div>
     </div>
@@ -854,7 +876,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 <section class="wrap" style="text-align:center">
   <span class="label gloria">Peta perjalanan anda</span>
   <h2 class="h2">Dari Daftar ke Komisen Pertama dengan <span class="stabilo">3 Fasa Tersusun</span></h2>
-  <p class="lede">Ikut turutan ni. Jangan lompat. Setiap fasa saya pantau dalam group.</p>
+  <p class="lede">Ikut turutan ni. Jangan lompat. Saya boleh dihubungi di WhatsApp di setiap fasa.</p>
 </section>
 
 <!-- ============ 11–13. FASA ============ -->
@@ -873,7 +895,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     <div class="fasa-head"><span class="label gloria">Fasa 2 · Belajar</span><h2>Faham Sistem, Bukan Main Hentam</h2><p>Belajar cara komisen berfungsi, peraturan program, dan cara promosi yang beretika.</p></div>
     <div class="mods">
       <div class="mod"><div class="prev"><i class="ph-bold ph-books"></i><small>Preview: E-Book Siri 0–2</small></div><div class="b"><h4>E-Book Siri 0, 1 & 2</h4><p>Asas affiliate Cuti.Biz (pakej EP).</p></div></div>
-      <div class="mod"><div class="prev"><i class="ph-bold ph-video-camera"></i><small>Preview: Sesi onboarding</small></div><div class="b"><h4>Sesi onboarding sponsor</h4><p>Live dalam group. <span class="contoh">GANTI jadual</span></p></div></div>
+      <div class="mod"><div class="prev"><i class="ph-bold ph-video-camera"></i><small>Preview: Kelas Google Meet</small></div><div class="b"><h4>Kelas online 9–10pm</h4><p>Siri 0 Isn/Jum · Siri 1 Sel/Sab · Siri 2 Rab/Ahd (EP).</p></div></div>
       <div class="mod"><div class="prev"><i class="ph-bold ph-chalkboard-teacher"></i><small>Preview: Kursus ATP/AFP</small></div><div class="b"><h4>Kursus ATP & AFP (pilihan)</h4><p>Cukai & kewangan untuk affiliate.</p></div></div>
     </div>
   </div>
@@ -882,7 +904,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
   <div class="wrap">
     <div class="fasa-head"><span class="label gloria">Fasa 3 · Promosi & Berkembang</span><h2>Kongsi, Dapat Komisen Pertama & Naik Tahap</h2><p>Mula promosi di media sosial, pantau ranking, dan rancang laluan EP → UP → AP.</p></div>
     <div class="mods">
-      <div class="mod"><div class="prev"><i class="ph-bold ph-share-network"></i><small>Preview: Template posting</small></div><div class="b"><h4>Template & caption</h4><p>Siap guna untuk FB, TikTok, WhatsApp.</p></div></div>
+      <div class="mod"><div class="prev"><i class="ph-bold ph-share-network"></i><small>Preview: Template posting</small></div><div class="b"><h4>Bahan promosi rasmi</h4><p>Poster rasmi Cuti.Biz untuk FB, TikTok, WhatsApp.</p></div></div>
       <div class="mod"><div class="prev"><i class="ph-bold ph-chart-bar"></i><small>Preview: Ranking</small></div><div class="b"><h4>Pantau prestasi</h4><p>Ranking & contest dalam portal.</p></div></div>
       <div class="mod"><div class="prev"><i class="ph-bold ph-stairs"></i><small>Preview: Laluan tahap</small></div><div class="b"><h4>Naik tahap</h4><p>EP → UP → Agensi Pemasaran.</p></div></div>
     </div>
@@ -914,23 +936,24 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 </section>
 
 <!-- ============ 15–16. BONUS + CASE STUDY ============ -->
-<!-- GANTI: bonus dari sponsor — tukar nama & nilai RM ikut apa yang anda betul-betul beri -->
+<!-- ============ 15–16. BONUS DALAM PAKEJ EP + BEDAH KOMISEN ============ -->
 <section class="sec-dark">
   <div class="wrap">
-    <span class="label gloria">Daftar bawah saya, dapat juga…</span>
-    <h2 class="h2">3 Bonus Eksklusif dari Sponsor</h2>
-    <p class="lede"><span class="contoh">CONTOH — GANTI BONUS & NILAI SEBENAR</span></p>
+    <span class="label gloria">Ambil EP, dapat juga…</span>
+    <h2 class="h2">3 Nilai Tambah Dalam Pakej EP</h2>
+    <p class="lede">Semua ni sebahagian dari ekosistem rasmi Cuti.Biz — bukan janji sponsor.</p>
     <div class="bonus">
-      <div class="bcard rv"><div class="mk"><i class="ph-bold ph-whatsapp-logo"></i></div><small>BONUS #1</small><h3>Group Support Ahli</h3><p style="color:#94a3b8;font-size:17px">Tanya apa saja, sponsor & team jawab.</p><p class="val" style="margin-top:10px">Nilai RM<span data-bonus="97">97</span></p></div>
-      <div class="bcard rv"><div class="mk" style="background:linear-gradient(135deg,#2563eb,#7c3aed)"><i class="ph-bold ph-files"></i></div><small>BONUS #2</small><h3>Template Caption & Poster</h3><p style="color:#94a3b8;font-size:17px">Siap guna untuk FB, TikTok & WhatsApp.</p><p class="val" style="margin-top:10px">Nilai RM<span data-bonus="47">47</span></p></div>
-      <div class="bcard rv"><div class="mk" style="background:linear-gradient(135deg,#16a34a,#0f766e)"><i class="ph-bold ph-video-conference"></i></div><small>BONUS #3</small><h3>Sesi Onboarding 1-on-1</h3><p style="color:#94a3b8;font-size:17px">30 minit setup akaun bersama sponsor.</p><p class="val" style="margin-top:10px">Nilai RM<span data-bonus="97">97</span></p></div>
+      <div class="bcard rv"><div class="mk"><i class="ph-bold ph-video-conference"></i></div><small>NILAI TAMBAH #1</small><h3>Kelas Online Unlimited</h3><p style="color:#94a3b8;font-size:17px">Siri 0 (Isnin & Jumaat), Siri 1 (Selasa & Sabtu), Siri 2 (Rabu & Ahad), 9–10pm di Google Meet. Ulang sampai faham.</p><p class="val" style="margin-top:10px">Termasuk untuk EP</p></div>
+      <div class="bcard rv"><div class="mk" style="background:linear-gradient(135deg,#2563eb,#7c3aed)"><i class="ph-bold ph-tiktok-logo"></i></div><small>NILAI TAMBAH #2</small><h3>Kursus Digital Marketing TikTok</h3><p style="color:#94a3b8;font-size:17px">Plus Latihan Asas Pemasaran Cuti.Biz — belajar promosi produk & servis guna TikTok.</p><p class="val" style="margin-top:10px">Termasuk untuk EP</p></div>
+      <div class="bcard rv"><div class="mk" style="background:linear-gradient(135deg,#16a34a,#0f766e)"><i class="ph-bold ph-gift"></i></div><small>NILAI TAMBAH #3</small><h3>Hadiah Misteri Bulanan</h3><p style="color:#94a3b8;font-size:17px">24 hadiah setiap bulan untuk Top 3 kategori P2P, EP, UP & PAL — bulan semasa & terkumpul.</p><p class="val" style="margin-top:10px">Ikut prestasi referral</p></div>
     </div>
-    <h3 style="text-align:center;font-size:clamp(24px,3.6vw,32px);margin-top:60px">Bedah Penuh: [Nama Ahli] dari Daftar P2P ke [Hasil] <span class="contoh">GANTI</span></h3>
+    <h3 style="text-align:center;font-size:clamp(24px,3.6vw,32px);margin-top:60px">Bedah Penuh: Macam Mana Komisen Satu Botol King Stevia Diagih</h3>
     <div class="case">
-      <div class="st"><small>MULA</small><p>[GANTI] Latar belakang ahli, kenapa join, pakej apa.</p></div>
-      <div class="st"><small>PROSES</small><p>[GANTI] Apa yang dia buat minggu 1–4: belajar, kongsi, follow up.</p></div>
-      <div class="st"><small>HASIL</small><p>[GANTI] Angka sebenar: referral, komisen, tahap semasa.</p></div>
+      <div class="st"><small>HARGA</small><p>Harga awam <b>RM50</b>. Ahli beli pada harga <b>RM35</b> — jimat RM15 (30%).</p></div>
+      <div class="st"><small>JUAL KE BUKAN AHLI</small><p>Seller yang kongsi link dapat komisen direct <b>RM15</b> (30% harga awam).</p></div>
+      <div class="st"><small>RANGKAIAN</small><p>Introducer/upline <b>RM4</b> (8%), OR PAL <b>RM3</b> (6%). Komisen ikut peranan masing-masing.</p></div>
     </div>
+    <p style="text-align:center;font-size:14px;color:#94a3b8;margin-top:12px">Sumber: Buletin Cuti.Biz "Platform Affiliate e-Commerce", 15/10/2026. Struktur boleh berubah ikut ketetapan pengurusan.</p>
   </div>
 </section>
 
@@ -958,13 +981,17 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 </section>
 
 <!-- ============ 18. WALL TESTIMONI ============ -->
-<!-- GANTI: 6–9 testimoni SEBENAR, berbeza dari slider atas -->
+<!-- ============ 18. MAKLUM BALAS PENIAGA (sebenar, dari Buletin 18/11/2026) ============ -->
 <section style="background:#f9fafb">
   <div class="wrap">
-    <span class="label gloria">Pelbagai latar belakang</span>
-    <h2 class="h2">Kata Ahli Team Saya</h2>
-    <p class="lede"><span class="contoh">CONTOH — GANTI DENGAN TESTIMONI SEBENAR</span></p>
-    <div class="wall" id="wall"></div>
+    <span class="label gloria">Maklum balas sebenar</span>
+    <h2 class="h2">Apa Kata Peniaga yang Dah Daftar PK</h2>
+    <p class="lede">Komen peniaga yang dikongsi dalam Buletin rasmi Cuti.Biz, 18/11/2026.</p>
+    <div class="wall">
+      <div class="wcard rv"><span class="rb">Peniaga PK</span><p>“Alhamdulillah, apps yang sangat baik dan boleh membantu peniaga-peniaga.”</p><div class="who" style="margin-top:8px"><div class="avi" style="background:#2563eb;width:44px;height:44px"><i class="ph-bold ph-storefront"></i></div><div><b>Peniaga Kedai (PK)</b><span>Buletin Cuti.Biz</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div></div>
+      <div class="wcard rv"><span class="rb">RM35 setahun</span><p>“RM35 untuk pengiklanan kedai selama setahun. Sangat murah!”</p><div class="who" style="margin-top:8px"><div class="avi" style="background:#f97316;width:44px;height:44px"><i class="ph-bold ph-storefront"></i></div><div><b>Peniaga Kedai (PK)</b><span>Buletin Cuti.Biz</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div></div>
+      <div class="wcard rv"><span class="rb">Promosi kedai</span><p>“Terima kasih kerana memperkenalkan saya apps Cuti.Biz ini untuk saya mempromosikan kedai.”</p><div class="who" style="margin-top:8px"><div class="avi" style="background:#16a34a;width:44px;height:44px"><i class="ph-bold ph-storefront"></i></div><div><b>Peniaga Kedai (PK)</b><span>Buletin Cuti.Biz</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div></div>
+    </div>
   </div>
 </section>
 
@@ -973,18 +1000,18 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
   <div class="wrap vs">
     <span class="gloria" style="color:#f97316;font-size:20px">Jadi, Berapa Pelaburan Anda Untuk Dapatkan..</span>
     <h2 class="red">Pakej EP Cuti.Biz?</h2>
-    <div class="vrow"><div class="mk" style="background:#bfdbfe;color:#1d4ed8"><i class="ph-bold ph-identification-badge"></i></div><div><span class="lb">Pakej utama · Harga asal</span><h4>Pakej EP — Ejen Pemasaran</h4><p style="font-size:16px;color:#6b7280">Keahlian, Biz Kad + Postage, ID Card + EasyParcel, E-Book Siri 0, 1 & 2</p><span class="v num">RM313</span></div></div>
-    <div class="vrow"><div class="mk" style="background:#fed7aa;color:#c2410c"><i class="ph-bold ph-gift"></i></div><div><span class="lb">3 Bonus Eksklusif Sponsor</span><h4>Group Support + Template + Onboarding 1-on-1</h4><span class="v num">RM<span id="bonusSum">0</span></span></div></div>
-    <p class="vtotal">Jumlah Keseluruhan : <span class="pillr">RM<span id="grandTotal">0</span></span></p>
+    <div class="vrow"><div class="mk"><img src="assets/poster-ep.webp" alt="Poster pakej EP" loading="lazy" style="height:100%;border-radius:10px;object-fit:cover"></div><div><span class="lb">Keahlian & alat pemasaran</span><h4>Keahlian P2P 1 tahun + Business Card + ID Card rasmi</h4><p style="font-size:16px;color:#6b7280">Semua 10 manfaat P2P: diskaun, Community Shop, Prelove, Expertise, Professional, Biz Directory, JobSpot…</p></div></div>
+    <div class="vrow"><div class="mk" style="background:#fed7aa;color:#c2410c"><i class="ph-bold ph-books"></i></div><div><span class="lb">Pembelajaran</span><h4>3 E-Book Siri 0, 1 & 2</h4><p style="font-size:16px;color:#6b7280">RM10 setiap satu untuk ahli</p><span class="v num">RM30</span></div></div>
+    <div class="vrow"><div class="mk" style="background:#ddd6fe;color:#6d28d9"><i class="ph-bold ph-video-conference"></i></div><div><span class="lb">Latihan</span><h4>Kelas online unlimited + Kursus Digital Marketing TikTok</h4></div></div>
+    <p class="vtotal">Harga Sebenar Pakej EP : <span class="pillr">RM313</span></p>
     <div class="drop" id="drop">
       <span class="gloria" style="color:#16a34a;font-size:22px">Tapi benda boleh ejas!</span>
       <p style="font-weight:700;margin:8px 0 6px">ANDA CUMA LABURKAN..</p>
-      <div><span class="pr">RM<span id="dropTotal">0</span></span></div>
-      <div><span class="pr" style="font-size:32px">RM313</span></div>
+      <div><span class="pr">RM313</span></div>
       <p style="margin-top:10px">Hanya..</p>
       <i class="ph-bold ph-arrow-down arr"></i>
       <div class="now">RM96.50</div>
-      <p style="font-size:16px;color:#6b7280;margin-top:8px">CSR Rate pakej EP (harga rasmi di cuti.biz pada 20/11/2026)</p>
+      <p style="font-size:16px;color:#6b7280;margin-top:8px">Harga Early Bird / CSR Rate pakej EP (portal & Buletin Cuti.Biz, 17/11/2026)</p>
     </div>
   </div>
 </section>
@@ -998,31 +1025,31 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     <div class="plans">
       <div class="plan">
         <h3>P2P</h3><p class="for">Pengguna & Perkhidmatan — untuk ahli biasa</p>
-        <div class="pk"><span style="background:#2563eb"><i class="ph-bold ph-user"></i></span></div>
+        <div class="pk"><img src="assets/poster-p2p.webp" alt="Poster rasmi pakej P2P" loading="lazy"></div>
         <span class="csr">CSR RATE</span>
         <span class="was">RM99</span>
         <div class="price">RM20 <small>/ setahun</small></div>
-        <ul><li><i class="ph-bold ph-check"></i>Keahlian RM20</li><li><i class="ph-bold ph-check"></i>Diskaun ahli</li><li><i class="ph-bold ph-check"></i>Community Product Online</li><li><i class="ph-bold ph-check"></i>Akses komuniti & perkhidmatan</li><li><i class="ph-bold ph-check"></i>Bonus sponsor</li></ul>
+        <ul><li><i class="ph-bold ph-check"></i>Keahlian RM20</li><li><i class="ph-bold ph-check"></i>Diskaun ahli</li><li><i class="ph-bold ph-check"></i>Community Product Online</li><li><i class="ph-bold ph-check"></i>Akses komuniti & perkhidmatan</li><li><i class="ph-bold ph-check"></i>Bimbingan sponsor (WhatsApp)</li></ul>
         <a class="pbtn" data-aff data-plan="P2P" href="#daftar">Daftar Sekarang</a>
       </div>
       <div class="plan hl">
         <span class="pop">★ PALING POPULAR</span>
         <h3>EP</h3><p class="for">Ejen Pemasaran — untuk yang serius promosi</p>
-        <div class="pk"><span style="background:#2563eb"><i class="ph-bold ph-user"></i></span><span style="background:#f97316"><i class="ph-bold ph-identification-card"></i></span><span style="background:#7c3aed"><i class="ph-bold ph-books"></i></span></div>
+        <div class="pk"><img src="assets/poster-ep.webp" alt="Poster rasmi pakej EP" loading="lazy"></div>
         <span class="csr">CSR RATE</span>
         <span class="was">RM313</span>
         <div class="price">RM96.50</div>
-        <ul><li><i class="ph-bold ph-check"></i>Keahlian RM20</li><li><i class="ph-bold ph-check"></i>Biz Kad + Postage</li><li><i class="ph-bold ph-check"></i>ID Card RM15 + EasyParcel</li><li><i class="ph-bold ph-check"></i>E-Book Siri 0, 1 & 2</li><li><i class="ph-bold ph-check"></i>Bonus sponsor</li></ul>
+        <ul><li><i class="ph-bold ph-check"></i>Keahlian RM20</li><li><i class="ph-bold ph-check"></i>Biz Kad + Postage</li><li><i class="ph-bold ph-check"></i>ID Card RM15 + EasyParcel</li><li><i class="ph-bold ph-check"></i>E-Book Siri 0, 1 & 2</li><li><i class="ph-bold ph-check"></i>Bimbingan sponsor (WhatsApp)</li></ul>
         <p style="font-size:13px;color:#94a3b8;margin:-10px 0 14px">*Caj penghantaran EasyParcel dikira berasingan.</p>
         <a class="pbtn" data-aff data-plan="EP" href="#daftar">Daftar Sekarang</a>
       </div>
       <div class="plan or">
         <h3>PK</h3><p class="for">Peniaga Kedai Fizikal — untuk pemilik kedai</p>
-        <div class="pk"><span style="background:#fff;color:#c2410c"><i class="ph-bold ph-user"></i></span><span style="background:#fff;color:#c2410c"><i class="ph-bold ph-storefront"></i></span></div>
+        <div class="pk"><img src="assets/poster-pk.webp" alt="Poster rasmi pakej PK" loading="lazy"></div>
         <span class="csr">CSR RATE</span>
         <span class="was">RM199</span>
         <div class="price">RM35 <small>/ setahun</small></div>
-        <ul><li><i class="ph-bold ph-check"></i>Semua manfaat P2P</li><li><i class="ph-bold ph-check"></i>Community Physical Shop</li><li><i class="ph-bold ph-check"></i>Pendaftaran kedai fizikal</li><li><i class="ph-bold ph-check"></i>Pakej RM35 berasingan</li><li><i class="ph-bold ph-check"></i>Bonus sponsor</li></ul>
+        <ul><li><i class="ph-bold ph-check"></i>Semua manfaat P2P</li><li><i class="ph-bold ph-check"></i>Community Physical Shop</li><li><i class="ph-bold ph-check"></i>Pendaftaran kedai fizikal</li><li><i class="ph-bold ph-check"></i>Pakej RM35 berasingan</li><li><i class="ph-bold ph-check"></i>Bimbingan sponsor (WhatsApp)</li></ul>
         <a class="pbtn" data-aff data-plan="PK" href="#daftar">Daftar Sekarang</a>
       </div>
     </div>
@@ -1046,7 +1073,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 <section class="wrap" id="daftar">
   <span class="label gloria">Langkah terakhir</span>
   <h2 class="h2">Lengkapkan <span class="stabilo">Pendaftaran</span> Anda</h2>
-  <p class="lede">Pendaftaran & bayaran dibuat terus di portal rasmi cuti.biz melalui link affiliate saya. Pastikan <b>Referral ID: CB981</b> — supaya anda masuk dalam team & dapat bonus sponsor.</p>
+  <p class="lede">Pendaftaran & bayaran dibuat terus di portal rasmi cuti.biz melalui link affiliate saya. Pastikan <b>Referral ID: CB981</b> — supaya anda masuk dalam team & dapat bimbingan sponsor.</p>
   <div class="reg-card">
     <p style="font-size:18px;color:#4b5563;margin-bottom:6px">Pakej dipilih: <b id="chosenPlan">belum pilih</b></p>
     <div class="cta-wrap" style="margin-top:14px">
@@ -1061,7 +1088,7 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     <div class="step" style="transition-delay:0s"><div class="ci" style="background:#2563eb"><i class="ph-bold ph-user-plus"></i></div><div><span class="sp" style="background:#dbeafe;color:#1d4ed8">LANGKAH 1</span><h4>Referral & maklumat akaun</h4><p>Referral <b>CB981</b> dikesan automatik. Isi nama penuh, No. IC & maklumat akaun.</p></div></div>
     <div class="step" style="transition-delay:.52s"><div class="ci" style="background:#16a34a"><i class="ph-bold ph-credit-card"></i></div><div><span class="sp" style="background:#dcfce7;color:#15803d">LANGKAH 2</span><h4>Pilih pakej & bayar</h4><p>Pilih P2P / PK / EP. Untuk EP, isi maklumat Biz Kad. Bayar & simpan resit.</p></div></div>
     <div class="step" style="transition-delay:1.04s"><div class="ci" style="background:#f97316"><i class="ph-bold ph-seal-check"></i></div><div><span class="sp" style="background:#ffedd5;color:#c2410c">LANGKAH 3</span><h4>Semakan admin</h4><p>Admin Cuti.Biz semak pendaftaran, kemudian akses ahli diaktifkan.</p></div></div>
-    <div class="step" style="transition-delay:1.56s"><div class="ci" style="background:#7c3aed"><i class="ph-bold ph-whatsapp-logo"></i></div><div><span class="sp" style="background:#ede9fe;color:#6d28d9">LANGKAH 4</span><h4>WhatsApp sponsor</h4><p>Hantar resit kepada saya. Saya masukkan anda ke group & beri bonus sponsor.</p></div></div>
+    <div class="step" style="transition-delay:1.56s"><div class="ci" style="background:#7c3aed"><i class="ph-bold ph-whatsapp-logo"></i></div><div><span class="sp" style="background:#ede9fe;color:#6d28d9">LANGKAH 4</span><h4>WhatsApp sponsor</h4><p>Hantar resit kepada saya. Saya bantu setup akaun & kongsi jadual kelas.</p></div></div>
   </div>
   <div class="note-g"><i class="ph-bold ph-info"></i><span>Ada masalah masa daftar atau bayaran? <a href="#" data-wa style="color:#047857;font-weight:700">WhatsApp saya</a> terus — saya bantu sampai siap.</span></div>
 </section>
@@ -1077,15 +1104,14 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
       <div class="paper">
         <div class="stamp"><i class="ph-bold ph-paper-plane-tilt"></i><b>MY</b></div>
         <div class="postmark">CUTI.BIZ<br>POS<br>MALAYSIA</div>
-        <!-- GANTI: tulis cerita SEBENAR sponsor (first person) -->
-        <p class="gloria" style="color:#1d4ed8;font-size:20px">Kenapa saya kongsi peluang ni…</p>
+                <p class="gloria" style="color:#1d4ed8;font-size:20px">Kenapa saya kongsi peluang ni…</p>
         <p>Kepada bakal ahli team saya,</p>
-        <p>[GANTI] Saya join Cuti.Biz sebab [sebab sebenar]. Masa mula dulu, saya pun ragu-ragu — dah banyak sangat "peluang" yang janji bulan dan bintang.</p>
-        <p>[GANTI] Apa yang buat saya kekal: modal kecil, syarikat berdaftar, ada komuniti yang aktif, dan sistem yang jelas tahap demi tahap. Saya tak perlu stok, tak perlu sewa kedai.</p>
-        <p>[GANTI] Sebab tu saya buka team sendiri. Saya nak orang macam anda mula dengan cara yang betul — faham sistem dulu, promosi dengan jujur, dan berkembang ikut kemampuan sendiri.</p>
-        <p>Kalau anda bersedia, saya tunggu dalam group.</p>
-        <!-- GANTI: SATU imej gabungan (foto bulat + tandatangan + nama), 500x200 -->
-        <div class="sig">Imej tandatangan sponsor <span class="contoh" style="margin-left:6px">GANTI</span></div>
+        <p>Saya tahu ramai dah serik dengan "peluang" yang janji bulan dan bintang. Sebab tu sebelum ajak sesiapa, saya baca dulu terma, polisi dan buletin rasmi Cuti.Biz satu per satu.</p>
+        <p>Apa yang saya jumpa: modal kecil (RM20 setahun), syarikat berdaftar SSM, komuniti lebih 10,000 ahli, kelas online setiap malam, dan sistem tahap yang jelas. Tak perlu stok, tak perlu sewa kedai. Dan terma mereka sendiri cakap jujur — tiada jaminan pendapatan.</p>
+        <p>Sebab tu saya kongsi peluang ni. Saya nak orang macam anda mula dengan cara yang betul — faham sistem dulu, promosi dengan jujur, dan berkembang ikut kemampuan sendiri.</p>
+        <p>Kalau anda bersedia, saya tunggu mesej anda di WhatsApp.</p>
+        <!-- Opsyen: ganti dengan imej tandatangan sebenar (500x200) -->
+        <div class="sig-typed">SifuRobot</div>
         <p class="sig-role">SifuRobot · Sponsor Affiliate Cuti.Biz</p>
       </div>
     </div>
@@ -1114,15 +1140,15 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
     <div class="proof">
       <span class="num" style="color:#0f172a">10,156+</span>
       <div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
-      <div class="avs"><img src="https://i.pravatar.cc/80?u=f1" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f2" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f3" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f4" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f5" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f6" alt="Ahli" loading="lazy"><img src="https://i.pravatar.cc/80?u=f7" alt="Ahli" loading="lazy"><span class="more">+10k</span></div>
+      <div class="avs"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23ca8a04'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%232563eb'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f97316'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%2316a34a'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%237c3aed'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23db2777'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%230891b2'/%3E%3Ccircle cx='20' cy='15' r='7' fill='white' fill-opacity='.85'/%3E%3Cpath d='M6 38c2-9 8-12 14-12s12 3 14 12z' fill='white' fill-opacity='.85'/%3E%3C/svg%3E" alt="" loading="lazy"><span class="more">+10k</span></div>
       <span>ahli dalam komuniti</span>
     </div>
   </div>
 
   <div class="ps">
     <p><span class="gloria">P.S.</span> Mula serendah RM20 setahun — kurang dari harga dua pinggan nasi kandar sebulan. Kalau ada isu bayaran, polisi bayaran balik rasmi Cuti.Biz melindungi anda, dan saya sendiri bantu sampai selesai.</p>
-    <p><span class="gloria">P.P.S.</span> Harga sekarang ialah <b>CSR Rate</b> (P2P asal RM99, EP asal RM313). Bila kadar ni berubah, ia tertakluk kepada ketetapan pengurusan Cuti.Biz — bukan saya. Bonus sponsor pula hanya untuk yang daftar melalui link saya.</p>
-    <p><span class="gloria">P.P.P.S.</span> Ingat Farah dalam group tadi? Semalam dia baru pemerhati, hari ni dah ahli dengan link affiliate sendiri. Langkah anda sama je — <a href="#harga">pilih pakej & daftar sekarang →</a></p>
+    <p><span class="gloria">P.P.S.</span> Harga sekarang ialah <b>CSR Rate</b> (P2P asal RM99, EP asal RM313). Bila kadar ni berubah, ia tertakluk kepada ketetapan pengurusan Cuti.Biz — bukan saya. Bimbingan saya pula untuk yang daftar dengan Referral ID CB981.</p>
+    <p><span class="gloria">P.P.P.S.</span> Ingat 10 manfaat P2P tadi — diskaun, Community Shop, JobSpot, Biz Directory? Semua tu terbuka dengan RM20. Hari ni anda pemerhati, esok anda ahli dengan link affiliate sendiri — <a href="#harga">pilih pakej & daftar sekarang →</a></p>
   </div>
 </section>
 
@@ -1140,19 +1166,19 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 
 <!-- ============ 28. POPUP ============ -->
 <div class="coupon" id="coupon" role="dialog" aria-labelledby="cTitle">
-  <div class="c-stub"><b>FREE</b><small>BONUS</small><i class="ph-bold ph-ticket bg"></i></div>
+  <div class="c-stub"><b>RM20</b><small>SETAHUN</small><i class="ph-bold ph-ticket bg"></i></div>
   <div class="c-main">
     <button class="c-x" id="cX" aria-label="Tutup"><i class="ph-bold ph-x"></i></button>
     <span class="gloria">Hadiah untuk anda!</span>
-    <h4 id="cTitle">3 Bonus Sponsor Percuma</h4>
-    <p><i class="ph-bold ph-users-three"></i> Untuk yang daftar melalui link saya. Masih ragu? Tanya dulu.</p>
+    <h4 id="cTitle">Mula Serendah RM20</h4>
+    <p><i class="ph-bold ph-whatsapp-logo"></i> Masih ragu? Tanya saya dulu sebelum daftar.</p>
     <a class="go" data-wa href="#" target="_blank" rel="noopener noreferrer"><i class="ph-fill ph-whatsapp-logo"></i>Tanya di WhatsApp</a>
   </div>
 </div>
-<button class="c-pill" id="cPill"><i class="ph-bold ph-gift"></i>BONUS FREE</button>
+<button class="c-pill" id="cPill"><i class="ph-bold ph-chat-circle-dots"></i>RM20 · TANYA</button>
 
 <script>
-/* ================= KONFIGURASI — GANTI DI SINI ================= */
+/* ================= KONFIGURASI ================= */
 const AFF_URL = 'https://cuti.biz/register?ref=CB981'; // link affiliate SifuRobot
 const WA_NUMBER = '60104463636';                       // WhatsApp SifuRobot
 const WA_TEXT = 'Salam, saya berminat nak jadi ahli Cuti.Biz. Boleh terangkan?';
@@ -1180,7 +1206,7 @@ io(document.getElementById('coachPhoto'),e=>e.classList.add('in'),.25);
 /* laptop + video */
 io(document.getElementById('laptop'),e=>e.classList.add('open'),.25);
 const scr=document.getElementById('screen'),loom=scr.dataset.loom.trim();
-if(loom){scr.innerHTML='<iframe src="'+loom+(loom.includes('?')?'&':'?')+'hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" loading="lazy" allowfullscreen title="Video Cuti.Biz"></iframe>';
+if(loom){document.getElementById('playHint').classList.remove('hide');scr.innerHTML='<iframe src="'+loom+(loom.includes('?')?'&':'?')+'hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true" loading="lazy" allowfullscreen title="Video Cuti.Biz"></iframe>';
   window.addEventListener('blur',()=>{setTimeout(()=>{if(document.activeElement&&document.activeElement.tagName==='IFRAME')document.getElementById('playHint').classList.add('hide')},0)});}
 else{scr.addEventListener('click',()=>document.getElementById('playHint').classList.add('hide'))}
 
@@ -1240,21 +1266,7 @@ function confetti(opts){if(RM)return;const c=document.createElement('canvas');c.
 io(document.getElementById('reveal'),()=>confetti({}),.4);
 io(document.getElementById('cmp'),()=>confetti({n:38,t:3000}),.35);
 
-/* wall testimoni (CONTOH — GANTI) */
-const W=[['[Nama]','Guru, Kedah','Join P2P','"[GANTI] Mula sebab nak diskaun ahli, sekarang dah kongsi dengan rakan sekerja."'],
-['[Nama]','Penjual kuih, Melaka','Kedai masuk direktori','"[GANTI] Daftar PK, pelanggan sekitar jumpa kedai saya dalam Mall."'],
-['[Nama]','Pemandu e-hailing, KL','Komisen pertama','"[GANTI] Kongsi link masa tunggu penumpang. Tak sangka ada yang daftar."'],
-['[Nama]','Pesara, Johor','Aktif komuniti','"[GANTI] Seronok ada komuniti, group sentiasa bantu bila saya tak faham."'],
-['[Nama]','Freelancer grafik, Sabah','JobSpot','"[GANTI] Dapat projek freelance melalui JobSpot ahli."'],
-['[Nama]','Ibu tunggal, Perak','Naik ke EP','"[GANTI] ID card & biz kad buat saya lebih yakin bila jumpa orang."']];
-document.getElementById('wall').innerHTML=W.map((w,k)=>'<div class="wcard rv in"><span class="rb">'+w[2]+'</span><p>'+w[3]+'</p><div class="who" style="margin-top:8px"><img src="https://i.pravatar.cc/96?u=w'+k+'" alt="Ahli" loading="lazy" style="width:44px;height:44px"><div><b>'+w[0]+'</b><span>'+w[1]+'</span><div class="stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div></div></div></div>').join('');
-
-/* value stack: jumlah = pakej EP (RM313) + semua bonus */
-const bsum=[...document.querySelectorAll('[data-bonus]')].reduce((a,e)=>a+(+e.dataset.bonus||0),0);
-const fmt=n=>n.toLocaleString('en-MY');
-document.getElementById('bonusSum').textContent=fmt(bsum);
-document.getElementById('grandTotal').textContent=fmt(313+bsum);
-document.getElementById('dropTotal').textContent=fmt(313+bsum);
+/* value stack strike delay */
 document.querySelectorAll('#drop .pr').forEach((p,k)=>p.style.setProperty('--d',k));
 
 /* popup */
