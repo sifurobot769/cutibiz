@@ -74,7 +74,15 @@ p,li{line-height:1.35}
 .hero{background:radial-gradient(1200px 500px at 50% -10%,rgba(37,99,235,.35),transparent),linear-gradient(180deg,#0f172a,#111c33);color:#fff;text-align:center}
 .hero h1{font-size:42px;line-height:1.25;margin:0 auto 26px;max-width:58rem}
 @media(max-width:480px){.hero h1{font-size:32px}}
-.pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:12px 0 26px}
+.pills-mq{position:relative;overflow:hidden;margin:12px -24px 26px}
+@media(min-width:1024px){.pills-mq{margin-left:-40px;margin-right:-40px}}
+.pills-mq::before,.pills-mq::after{content:"";position:absolute;top:0;bottom:0;width:min(80px,14%);z-index:2;pointer-events:none}
+.pills-mq::before{left:0;background:linear-gradient(90deg,#111e3d,rgba(17,30,61,0))}
+.pills-mq::after{right:0;background:linear-gradient(270deg,#111e3d,rgba(17,30,61,0))}
+.pills-track{display:flex;width:max-content;animation:mq 22s linear infinite}
+.pills-mq:hover .pills-track{animation-play-state:paused}
+.pills{display:flex;flex-wrap:nowrap;gap:10px;padding-right:10px}
+.pill{white-space:nowrap}
 .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(250,204,21,.08);border:1px solid rgba(250,204,21,.35);color:#fff;font-weight:700;font-size:16px;border-radius:999px;padding:8px 14px}
 .pill i{color:#facc15}
 @media(max-width:480px){.pill{font-size:14px;padding:7px 11px}}
@@ -576,11 +584,21 @@ footer{background:#0f172a;color:#cbd5e1;text-align:center}
 <header class="hero">
   <div class="wrap" style="padding-bottom:60px">
     <span class="gloria" style="color:#fde68a;font-size:20px">Khas untuk anda yang…</span>
-    <div class="pills">
-      <span class="pill"><i class="ph-bold ph-wallet"></i>Nak income sampingan</span>
-      <span class="pill"><i class="ph-bold ph-storefront"></i>Ada kedai / bisnes kecil</span>
-      <span class="pill"><i class="ph-bold ph-device-mobile"></i>Aktif di media sosial</span>
-      <span class="pill"><i class="ph-bold ph-plant"></i>Tak pernah berniaga online</span>
+    <div class="pills-mq" aria-label="Khas untuk anda yang nak income sampingan, ada kedai atau bisnes kecil, aktif di media sosial, tak pernah berniaga online">
+      <div class="pills-track">
+        <div class="pills">
+          <span class="pill"><i class="ph-bold ph-wallet"></i>Nak income sampingan</span>
+          <span class="pill"><i class="ph-bold ph-storefront"></i>Ada kedai / bisnes kecil</span>
+          <span class="pill"><i class="ph-bold ph-device-mobile"></i>Aktif di media sosial</span>
+          <span class="pill"><i class="ph-bold ph-plant"></i>Tak pernah berniaga online</span>
+        </div>
+        <div class="pills" aria-hidden="true">
+          <span class="pill"><i class="ph-bold ph-wallet"></i>Nak income sampingan</span>
+          <span class="pill"><i class="ph-bold ph-storefront"></i>Ada kedai / bisnes kecil</span>
+          <span class="pill"><i class="ph-bold ph-device-mobile"></i>Aktif di media sosial</span>
+          <span class="pill"><i class="ph-bold ph-plant"></i>Tak pernah berniaga online</span>
+        </div>
+      </div>
     </div>
     <h1>Jadi Ahli Affiliate <span class="stabilo">Cuti.Biz</span> dalam 5 Minit dengan Modal <span class="stabilo">RM20 Setahun</span>, Walaupun Anda Tak Pernah Berniaga</h1>
     <p class="subh">Satu keahlian, satu ekosistem: diskaun ahli, Mall komuniti, JobSpot, kursus affiliate dan laluan naik tahap dari ahli biasa sampai Agensi Pemasaran. Saya bimbing dari hari pertama.</p>
